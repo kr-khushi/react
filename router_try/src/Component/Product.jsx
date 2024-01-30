@@ -5,10 +5,10 @@ const Product = () => {
   return (
     <>
       <h1>Product Page</h1>
-      <Link to="feature" style={{ margin: "50px" }}>
+      <Link to="/product/feature" style={{ margin: "50px" }}>
         Feature
       </Link>
-      <Link to="newfeature" style={{ margin: "50px" }}>
+      <Link to="/product/newfeature" style={{ margin: "50px" }}>
         New
       </Link>
       <Outlet />

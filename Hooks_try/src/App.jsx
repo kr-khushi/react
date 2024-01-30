@@ -5,7 +5,7 @@ import { useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState("kr-khushi");
   const [userDetails, setUserDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isTyping, setIsTyping] = useState(true);
@@ -17,7 +17,7 @@ const App = () => {
     // }
     try {
       const res = await axios.get(`https://api.github.com/users/${userName}`);
-      console.log(res.data);
+      console.log(res?.data);
       setUserDetails(res.data);
       setUserName("");
       setIsLoading(false);
@@ -31,9 +31,9 @@ const App = () => {
     }
   };
 
-  // useEffect(() => {
-  //   handleSubmit();
-  // }, []);
+  useEffect(() => {
+    handleSubmit();
+  }, []);
 
   return (
     <>
