@@ -9,7 +9,11 @@ import DataFetch from "./Component_Data_Fetch/DataFetch";
 import Callback from "./Compoent_call_back/Callback";
 import Memo from "./Compoent_call_back/Memo";
 import Hook_useRef from "./Component_ref/Hook_useRef";
-
+import ButtonIncrement from "./HOC/ButtonIncrement";
+import HoverIncrement from "./HOC/HoverIncrement";
+import DocTitleOne from "./Try_Custom_Hooks/DocTitleOne";
+import Counter from "./Try_Custom_Hooks/Counter";
+import UserForm from "./Try_Custom_Hooks/UserForm";
 /* useContext + useReducer */
 
 export const countContext = createContext();
@@ -39,7 +43,6 @@ const App = () => {
       {/* <CounterOne /> */}
       {/* <CounterTwo /> */}
       {/* <CounteThree /> */}
-
       {/* useContext + useReducer */}
       <countContext.Provider
         value={{ countState: count, countDispatch: dispatch }}
@@ -49,29 +52,43 @@ const App = () => {
         <ComponentB />
         <ComponentC />
       </countContext.Provider>
-
       <hr />
       <hr />
       <hr />
       <h2>Data Fetching using useReducer</h2>
       <DataFetch />
-
       <hr />
       <hr />
       <hr />
-
       <Callback />
-
       <hr />
       <hr />
       <hr />
-
       <Memo />
-
       <hr />
       <hr />
       <hr />
       <Hook_useRef />
+      <hr />
+      <hr />
+      <hr />
+      <ButtonIncrement />
+      <HoverIncrement />
+
+      <hr />
+      <hr />
+      <hr />
+      <DocTitleOne />
+
+      <hr />
+      <hr />
+      <hr />
+      <Counter />
+
+      <hr />
+      <hr />
+      <hr />
+      <UserForm />
     </div>
   );
 };
