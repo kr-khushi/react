@@ -37,6 +37,7 @@ const CartProvider = ({ children }) => {
           };
         }
 
+
       case "INCREASE_QUANTITY":
         return {
           ...state,

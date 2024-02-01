@@ -1,12 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "../../style/home.css";
 
 const Home = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleClick = () => {
-    navigate("/product");
+    const queryParams = new URLSearchParams(location.search);
+    queryParams.set("offset", 0);
+    queryParams.set("limit", 5);
+    // navigate("/product");
+    navigate(`/product?${queryParams.toString()}`);
   };
 
   return (
